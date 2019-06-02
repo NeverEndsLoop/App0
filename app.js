@@ -47,7 +47,7 @@ game.addEventListener('mousedown', function(e) {
             gameOver(`Game Over !, Lost, the currect number is ${winningNumber}`, 'red')
          } else {
             guessInput.value = '';
-			if((guess - winningNumber) === 2 || (winningNumber - guess) === 2)
+			if(Math.abs(guess - winningNumber) <= 2 )
 			{
             setMassage(`Worng answer, still left ${guessLeft} guesses , Hot guess`, 'red');
 			}
